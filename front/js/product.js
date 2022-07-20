@@ -4,7 +4,9 @@
 const SERVER_URL = "http://localhost:3000/api/products/";
 
 // Variables qui stockent les sélecteurs (#) // CONST //
-const itemImg = document.getElementById("image");
+
+//const itemImg = document.getElementByClassName("item__img");
+const itemImg = document.getElementsById("image");
 const itemTitle = document.getElementById("title");
 const itemPrice = document.getElementById("price");
 const itemDescription = document.getElementById("description");
@@ -76,7 +78,6 @@ function addToCart(data) {
   }
 
   // Création d'un objet avec les datas de l'item //
-
 
   // Vérification des champs obligatoires //
   if (itemQuantity.value < 1 || itemColors.value === "" || itemQuantity.value > 100) {
