@@ -217,7 +217,7 @@ function modifyProducts() {
     // (micro)Fonction de mise è jour du panier //
     function updateStorage() {
         window.localStorage.setItem("allCouches", JSON.stringify(storage));
-        location.reload();
+        calculateTotal(storage, data);
     }
     // Boucle el supprimés //
     [...suppressButton].forEach((item) => {
@@ -244,6 +244,7 @@ function modifyProducts() {
                         return true;
                     });
                     updateStorage();
+                    location.reload();
                 }
             }
         });

@@ -1,10 +1,10 @@
-// Creating variable for id of command
+// Variable pour l'id de la commande
 const orderIdUrl = new URLSearchParams(window.location.search).get("orderId");
 
-// Creating variable for selectors
+// Variable pour sélecteur
 const orderId = document.getElementById("orderId");
 
-// Inserting orderId into DOM
+// Insertion orderID dans le DOM
 orderId.innerHTML = orderIdUrl;
 
 // Suppression du local Storage

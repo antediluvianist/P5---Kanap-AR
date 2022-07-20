@@ -5,8 +5,8 @@ const SERVER_URL = "http://localhost:3000/api/products/";
 
 // Variables qui stockent les sélecteurs (#) // CONST //
 
-//const itemImg = document.getElementByClassName("item__img");
-const itemImg = document.getElementsById("image");
+// const itemImg = document.getElementById("image");
+const itemImg = document.getElementsByClassName("item__img");
 const itemTitle = document.getElementById("title");
 const itemPrice = document.getElementById("price");
 const itemDescription = document.getElementById("description");
@@ -49,8 +49,9 @@ fetch(`${SERVER_URL}${id}`)
 //// Fonction de construction de contenu ////
 
 function buildContent(datas) {
-  let productImg = `<img src="${datas.imageUrl}" alt="${datas.altTxt}">`;
-  itemImg.insertAdjacentHTML("beforeend", productImg);
+  const img = itemImg[0].getElementsByTagName("img")[0]
+  img.src = datas.imageUrl
+  img.alt = datas.altTxt
 }
 
 //// Fonction d'ajout des couleurs ////
@@ -78,6 +79,7 @@ function addToCart(data) {
   }
 
   // Création d'un objet avec les datas de l'item //
+
 
   // Vérification des champs obligatoires //
   if (itemQuantity.value < 1 || itemColors.value === "" || itemQuantity.value > 100) {
