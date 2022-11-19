@@ -20,11 +20,11 @@ You will need to have Node and `npm` installed locally on your machine.
 
 # TO RUN :
 
-- 1. Clone this repo.
+- Clone this repo.
 
-- 2. From the "back" folder of the project, run `npm install`.
+- From the "back" folder of the project, run `npm install`.
 
-- 3. You can then run the server with `node server`. 
+- You can then run the server with `node server`. 
 The server should run on `localhost` with default port `3000`. If the
 server runs on another port for any reason, this is printed to the
 console when the server starts, e.g. `Listening on port 3001`.
