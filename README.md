@@ -28,4 +28,4 @@ console when the server starts, e.g. `Listening on port 3001`.
 
 # TECH
 
-Javascript Es6
+- Javascript Es6
